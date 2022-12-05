@@ -1,0 +1,119 @@
+/* MOBILE FIRST CSS */
+
+* { box-sizing: border-box; }
+
+@font-face {
+    font-family: "BSD";
+    src: url(../fonts/BigShouldersDisplay-Bold.ttf);
+}
+@font-face {
+    font-family: "Lex";
+    src: url(../fonts/LexendDeca-Regular.ttf);
+}
+
+:root {
+        --orange: hsl(31, 77%, 52%);
+        --dark-cyan: hsl(184, 100%, 22%);
+        --very-dark-cyan: hsl(179, 100%, 13%);
+
+        --main-font:"Lex";
+        --headings-font:"BSD";
+}
+
+.container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    color:hsl(0, 0%, 95%);
+    margin: 5em 1em;
+}
+
+p {
+    font-size: 15px;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: var(--main-font);
+    line-height: 1.7em;
+}
+
+h1 {
+    font-family: var(--headings-font);
+    margin: 1em 0 0.8em 0;
+    font-size: 2.5em;
+}
+
+/* BOXES */
+
+.box1, .box2, .box3 {  
+    width: 100%;
+    padding: 2.8em;
+}
+
+.box1 {
+    background-color: var(--orange);
+    border-radius: 1em 1em 0 0;
+}
+    .box1 .btn-lm {
+        color: var(--orange);
+    }
+
+.box2 {
+    background-color: var(--dark-cyan);
+}
+    .box2 .btn-lm {
+        color: var(--dark-cyan);
+    }
+
+.box3 {
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 0 1em 1em;
+}
+    .box3 .btn-lm {
+        color: var(--very-dark-cyan);
+    }
+
+/* BUTTON */
+
+.btn-lm {
+    border: 2px solid hsl(0, 0%, 95%);
+    background-color: hsl(0, 0%, 95%);    
+    border-radius: 2em;
+    padding: 1em 2em;
+    margin: 1em 0 0 0;
+    font-family: var(--main-font);
+    font-size: 16px;
+}
+    .btn-lm:hover {
+        cursor: pointer;
+        background-color: transparent;
+        color:hsl(0, 0%, 95%);
+    }
+
+/* DESKTOP VIEW 376px - 1440px */
+
+@media all and (min-width:376px) {
+    body { 
+        overflow: hidden;
+    }
+    .container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        padding: 0 8%;
+        min-height: 100vh;
+        margin: 0;
+    }
+    .box1, .box2, .box3 {
+        max-width: 25%;
+        border-radius: 0;
+    }
+    .box1  {
+        border-radius: 0.5em 0 0 0.5em;
+    }
+    .box3 {
+        border-radius: 0 0.5em 0.5em 0;
+    }
+    .btn-lm {
+        margin: 5em 0 0 0;
+    }
+}
