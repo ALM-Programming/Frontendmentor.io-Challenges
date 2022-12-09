@@ -11,22 +11,20 @@ body { margin: 0; padding: 0; }
   justify-content: center;
   align-items: center;
 }
-
 .container {
   width: 70%;
   height: 447px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  
+  align-items: center;  
 }
-
 .text {
   border-radius: 10px 0 0 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   font-family: "Inter", sans-serif;
   padding: 3em 5em 3em 3.8em;
   background-color: hsl(244, 38%, 16%);
@@ -34,45 +32,39 @@ body { margin: 0; padding: 0; }
   width: 50%;
   color: hsla(0, 0%, 100%, 0.75);
 }
-
 .title {
-  font-size: 2.2em;
-  margin:0;
-  margin-bottom: 0.5em;
+  font-size: 2em;
+  margin:0 0 0.2em 0;
   font-weight: 600;
 }
   .title span {
     color: hsl(277, 64%, 61%);
   }
-
-.description { 
-  font-size: 1em;
+.description {
+  font-size: 0.9em;
   line-height: 1.7em;
   color: hsla(0, 0%, 100%, 0.6);
-  margin-bottom: 4em;
-  padding-right: 2em;
+  margin-bottom: 3.5em;
 }
-
 .stats {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  align-self: flex-start;
   margin-top: 20px;
 }
 .number, .numberUp {
   font-size: 1.5em;
   font-weight: 600;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: center;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: flex-start;
 }
 .numberUp {
   text-transform: uppercase;
 }
 .stat {
   text-transform: uppercase;
-  font-size:0.45em;
+  font-size:0.5em;
   font-family: "Lexend Deca",serif;
   letter-spacing: 0.1em;
   font-weight: 400;
@@ -90,7 +82,6 @@ body { margin: 0; padding: 0; }
   filter: contrast(10%);
   filter:saturate(10%);
 }
-
 .overlay {
   position: absolute;
   top:0;
@@ -100,4 +91,48 @@ body { margin: 0; padding: 0; }
   background-color: hsl(277, 85%, 51%);
   opacity:0.5;
   border-radius: 0 10px 10px 0;
+}
+
+@media (max-width:376px) {
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 88%;
+  }
+  .text {
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    padding: 1em 1em 1em 1em;
+    text-align: center;
+    height: 550px;
+    padding: 2em 1em;
+  }
+  .img-office, .img, .overlay {
+    border-radius: 10px 10px 0 0;
+  }
+  .title {
+    font-size: 1.8em;
+    margin-top:0;
+  }
+  .description {
+    font-size:1em;
+    margin-bottom: 1em;
+    margin-top: 0;
+    padding: 0 0.6em 0 0.6em;
+  }
+  .stats {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+  .number {margin-bottom: 1em;}
+  .number, .numberUp {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .stat {
+    margin: 5px 0 0 0;
+  }
 }
