@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+/* GENERAL */
+* { border: 0px solid black; }
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3% 0;
+}
+/* CONTAINERS */
+main {
+    background-image: url('/assets/images/bg-pattern-top-desktop.svg'),
+    url('/assets/images/bg-pattern-bottom-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: 0% 0%, 150% 150%;
+    margin: 0;
+    height: 40%;
+    width: 65%;
+    padding:3%;
+    font-family: 'League Spartan', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+.container-1 {
+    display: flex;
+    gap: 10em;
+}
+.container-2 {
+    display: flex;
+    gap: 2em;
+    height: 250px;
+}
+
+/* CONTAINER 1 */
+.intro {
+    justify-content: flex-start;
+    width: 40%;
+}
+.intro h1 {
+    color: hsl(300, 43%, 22%);
+    font-size: 4em;
+}
+.description {
+    color: hsl(303, 10%, 53%);
+    font-size: 1.4em;
+}
+.rates {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    color: hsl(300, 43%, 22%);
+}
+        /* STAR CARD */
+        .stars {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: hsl(300, 24%, 96%);
+            margin-top: 10%;
+            width: 80%;
+            height: 10%;
+            border-radius: 10px;
+            padding: 2% 2% 2% 5%;
+            font-size: 1.4em;            
+        }
+        .stars p { display: inline-block; margin-left: 30px;}
+
+
+/* CONTAINER 2 */
+.card {
+    background-color: hsl(300, 43%, 22%);
+    padding:2.5% 2.5% 1%;
+    border-radius: 7px;
+}
+.card-top {
+    display: flex;
+}
+.top-text {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+.verified {
+    color: hsl(333, 80%, 67%);
+}
+.name {
+    color: hsl(0, 0%, 100%);
+}
+
+
+/* SPECIFIC */
+.flex-top, .flex-left {
+    align-self: flex-start;
+}
+.flex-mid {
+    align-self: center;    
+}
+.flex-bottom, .flex-right {
+    align-self: flex-end;
+}
+
+
+/* CARD */
+.desc {
+    color: #fff;
+    font-size: 1.1em;
+    line-height: 1.3em;
+}
+
+/* IMAGES */
+.pic {
+    border-radius: 50%;
+    margin-right: 25px;
+    width: 15%;
+}
+
+@media (max-width:375px) {
+    body {
+        margin-top: 0;
+        padding-top: 0;
+    }
+    main { 
+        background-image: url('/assets/images/bg-pattern-top-mobile.svg'),
+        url('/assets/images/bg-pattern-bottom-mobile.svg');
+        background-position: 100% 0%, 150% 150%;
+        width: 100%;
+        padding: 10% 0;
+    }
+    .container-1, .container-2 {
+        flex-direction: column;
+    }
+    .container-1 {
+        gap: 2em;
+    }
+    .container-2 {
+        gap: 1em;
+    }
+    .flex-2 {
+        margin-bottom: 1em;
+    }
+    .intro { 
+        width: 100%; 
+        text-align: center;
+    }
+    .intro h1 {
+        font-size: 2.5em;
+    }
+    .description {
+        font-size: 1.1em;
+        line-height: 1.2em;
+        padding: 0 3%
+    }
+    .rates {
+        width: 100%;
+        margin-bottom: 20%;
+        gap: 1em;
+        font-size: 0.8em;
+        font-weight: bold;
+    }
+    .stars {
+        flex-direction: column;
+        margin-top:0;
+        padding: 0;
+        width: 90%;
+    }
+    .stars p {margin-left: 0;}
+    .starsimg {
+        padding-top: 5%;
+    }
+    .flex-top, .flex-left, .flex-bottom, .flex-right {
+        align-self: center;
+    }
+
+    .card {
+        padding: 10%;
+    }
+    .desc {
+        margin-bottom: 0;
+        font-size: 0.88em;
+    }
+}
